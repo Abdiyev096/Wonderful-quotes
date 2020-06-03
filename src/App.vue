@@ -1,28 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <AddQuote />
+    <QuoteList />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header';
+import AddQuote from './components/Add-quote';
+import QuoteList from './components/Quote-list';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+
+    methods: {
+    },
+
+    components: {
+      Header,
+      AddQuote,
+      QuoteList
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+body {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-size: 16px;
+  color: #000;
 }
+
 </style>
